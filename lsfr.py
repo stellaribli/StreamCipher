@@ -1,4 +1,4 @@
-def ksa_complex(key):
+def ksa_lsfr(key):
     key_length = len(key)
 
     lsfr = []
