@@ -18,7 +18,7 @@
 #FBF8F1
 ;</string>
   </property>
-  <widget class="QPushButton" name="encryptButton">
+  <widget class="QPushButton" name="teksButton">
    <property name="geometry">
     <rect>
      <x>400</x>

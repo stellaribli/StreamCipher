@@ -18,7 +18,7 @@
 #FBF8F1
 ;</string>
   </property>
-  <widget class="QPushButton" name="encryptButton">
+  <widget class="QPushButton" name="decryptB">
    <property name="geometry">
     <rect>
      <x>400</x>
@@ -63,7 +63,7 @@ font: 17pt &quot;Mulish&quot;;color:#fff;
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QPushButton" name="uploadButton">
+  <widget class="QPushButton" name="encryptB">
    <property name="geometry">
     <rect>
      <x>240</x>
@@ -89,7 +89,7 @@ font: 17pt &quot;Mulish&quot;;color:#fff;
     <string>Enkripsi</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="kunci_2">
+  <widget class="QLineEdit" name="kunci">
    <property name="geometry">
     <rect>
      <x>240</x>
@@ -112,10 +112,10 @@ padding-left:15px;</string>
     <string/>
    </property>
    <property name="placeholderText">
-    <string>Teks</string>
+    <string>Kunci</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="uploadButton_2">
+  <widget class="QPushButton" name="uploadButton">
    <property name="geometry">
     <rect>
      <x>240</x>
