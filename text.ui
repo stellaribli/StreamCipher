@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>789</width>
+    <height>321</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: 
+#FBF8F1
+;</string>
+  </property>
+  <widget class="QPushButton" name="encryptButton">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>200</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{ 
+	background-color: #92A9BD; color:#FFFFFF;
+font: 17pt &quot;Mulish&quot;;color:#fff; 
+	border-radius: 13.25760269165039px;
+}
+
+ QPushButton:hover {
+	background-color: #7C99AC; color:#FFFFFF;
+font: 17pt &quot;Mulish&quot;;color:#fff; 
+	border-radius: 13.25760269165039px;
+ }</string>
+   </property>
+   <property name="text">
+    <string>Dekripsi</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>30</y>
+     <width>341</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 20pt &quot;Mulish&quot;;color:#1D2D5E; </string>
+   </property>
+   <property name="text">
+    <string>Extended RC4</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="uploadButton">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>200</y>
+     <width>151</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{ 
+	background-color: #92A9BD; color:#FFFFFF;
+font: 17pt &quot;Mulish&quot;;color:#fff; 
+	border-radius: 13.25760269165039px;
+}
+
+ QPushButton:hover {
+	background-color: #7C99AC; color:#FFFFFF;
+font: 17pt &quot;Mulish&quot;;color:#fff; 
+	border-radius: 13.25760269165039px;
+ }</string>
+   </property>
+   <property name="text">
+    <string>Enkripsi</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="kunci">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>80</y>
+     <width>301</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 15pt &quot;Mulish&quot;;color:#1D2D5E; 
+height: 47.76695251464844px;
+width: 376.5159912109375px;
+left: 538px;
+top: 229px;
+border-radius: 13.25760269165039px;
+border:2px solid #7C99AC;
+padding-left:15px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>Kunci</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="kunci_2">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>140</y>
+     <width>301</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 15pt &quot;Mulish&quot;;color:#1D2D5E; 
+height: 47.76695251464844px;
+width: 376.5159912109375px;
+left: 538px;
+top: 229px;
+border-radius: 13.25760269165039px;
+border:2px solid #7C99AC;
+padding-left:15px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>Teks</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="hasil">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>250</y>
+     <width>301</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 18pt &quot;Mulish&quot;;color:#000; </string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
