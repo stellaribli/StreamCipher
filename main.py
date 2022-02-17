@@ -120,6 +120,8 @@ class Upload(QDialog):
         kunci = self.kunci.text()
         keluaran = convert(kunci,data)
         keluaran = 'Hasil Konversi: ' + keluaran
+        teksmasukan = 'Teks yang Dimasukkan: ' + data
+        self.hasil_2.setText(teksmasukan)
         self.hasil.setText(keluaran)  
     def decrypt(self):    
         kunci = self.kunci.text()

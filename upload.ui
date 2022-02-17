@@ -157,8 +157,8 @@ border:2px solid #7C99AC;
   <widget class="QLabel" name="hasil">
    <property name="geometry">
     <rect>
-     <x>240</x>
-     <y>240</y>
+     <x>250</x>
+     <y>280</y>
      <width>301</width>
      <height>41</height>
     </rect>
@@ -197,6 +197,25 @@ font: 17pt &quot;Mulish&quot;;color:#fff;
    </property>
    <property name="text">
     <string>Back</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="hasil_2">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>240</y>
+     <width>301</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 18pt &quot;Mulish&quot;;color:#000; </string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
  </widget>
