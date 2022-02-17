@@ -62,4 +62,3 @@ def convert(key, teks): # Encrypt & decrypt
         result.append(r)
     output = ''.join(result)
     return (codecs.decode(output, 'hex_codec').decode('latin-1'))
-
