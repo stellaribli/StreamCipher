@@ -75,10 +75,12 @@ class Landing(QDialog):
         loadUi('landingpage.ui', self)
         self.teksButton.clicked.connect(self.gotoText)
         self.uploadButton.clicked.connect(self.gotoUpload)
+
     def gotoText(self):
         widget.setCurrentIndex(2)
     def gotoUpload(self):
         widget.setCurrentIndex(1)
+
 class Text(QDialog):
     def __init__(self):
         super(Text, self).__init__()
@@ -86,19 +88,25 @@ class Text(QDialog):
         self.encryptB.clicked.connect(self.encrypt)
         self.decryptB.clicked.connect(self.decrypt)
         self.uploadedFile = None 
+        self.backButton.clicked.connect(self.gotoHome)
     def encrypt(self): 
         kunci = self.kunci.text()
         teks = self.teks.text() 
         keluaran = convert(kunci,teks)
-        keluaran = 'Hasil Enkripsi: ' + keluaran
+        keluaran = 'Hasil Konversi: ' + keluaran
         print(keluaran)
         self.hasil.setText(keluaran)   
     def decrypt(self):    
         kunci = self.kunci.text()
         teks = self.teks.text() 
         keluaran = convert(kunci,teks)
-        keluaran = 'Hasil Dekripsi: ' + keluaran
-        self.hasil.setText(keluaran)   
+        file = open('HasilKonversi.txt', 'w')
+        file.write(keluaran)
+        file.close()
+        keluaran = 'Berhasil diunduh!'
+        self.hasil.setText(keluaran)
+    def gotoHome(self):
+        widget.setCurrentIndex(0)   
 class Upload(QDialog):
     def __init__(self):
         super(Upload, self).__init__()
@@ -107,15 +115,19 @@ class Upload(QDialog):
         self.encryptB.clicked.connect(self.encrypt)
         self.decryptB.clicked.connect(self.decrypt)
         self.uploadedFile = None 
+        self.backButton.clicked.connect(self.gotoHome)
     def encrypt(self): 
         kunci = self.kunci.text()
         keluaran = convert(kunci,data)
-        keluaran = 'Hasil Enkripsi: ' + keluaran
+        keluaran = 'Hasil Konversi: ' + keluaran
         self.hasil.setText(keluaran)  
     def decrypt(self):    
         kunci = self.kunci.text()
         keluaran = convert(kunci,data)
-        keluaran = 'Hasil Dekripsi: ' + keluaran
+        file = open('HasilKonversi.txt', 'w')
+        file.write(keluaran)
+        file.close()
+        keluaran = 'Berhasil diunduh!'
         self.hasil.setText(keluaran)   
     def upload(self):
         fileName, _ = QFileDialog.getOpenFileName(
@@ -128,6 +140,8 @@ class Upload(QDialog):
             data = file1.read()
         else:
             print("No file selected")  
+    def gotoHome(self):
+        widget.setCurrentIndex(0)
 
 app = QApplication(sys.argv)
 widget = QtWidgets.QStackedWidget()

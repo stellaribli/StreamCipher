@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>789</width>
+    <width>786</width>
     <height>321</height>
    </rect>
   </property>
@@ -41,7 +41,7 @@ font: 17pt &quot;Mulish&quot;;color:#fff;
  }</string>
    </property>
    <property name="text">
-    <string>Dekripsi</string>
+    <string>Unduh Hasil</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
@@ -86,7 +86,7 @@ font: 17pt &quot;Mulish&quot;;color:#fff;
  }</string>
    </property>
    <property name="text">
-    <string>Enkripsi</string>
+    <string>Enkripsi / Dekripsi</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="kunci">
@@ -158,6 +158,32 @@ padding-left:15px;</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="backButton">
+   <property name="geometry">
+    <rect>
+     <x>640</x>
+     <y>20</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{ 
+	background-color: #92A9BD; color:#FFFFFF;
+font: 17pt &quot;Mulish&quot;;color:#fff; 
+	border-radius: 13.25760269165039px;
+}
+
+ QPushButton:hover {
+	background-color: #7C99AC; color:#FFFFFF;
+font: 17pt &quot;Mulish&quot;;color:#fff; 
+	border-radius: 13.25760269165039px;
+ }</string>
+   </property>
+   <property name="text">
+    <string>Back</string>
    </property>
   </widget>
  </widget>
