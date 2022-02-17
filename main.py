@@ -8,7 +8,7 @@ from PyQt5.uic import loadUi
 import codecs
 
 
-def shortenKey(key): #memendekkan panjang key menjadi 256 bit
+def shortenKey(key): #memendekkan panjang key menyesuaikan panjang KSA
     temp_key = list(key)
     new_key = []
     for i in range(32):
@@ -18,13 +18,13 @@ def shortenKey(key): #memendekkan panjang key menjadi 256 bit
 def ksa_lsfr(key):
     key_length = len(key)
 
-    if(len(key)<=32):  #mengulang key jika panjang key kurang dari 256 bit
+    if(len(key)<=32):  #mengulang key jika panjang key kurang dari panjang KSA 
         key = list(key)
         for i in range(len(key)):
             key[i] = ord(key[i])
         for i in range(32 - len(key)): 
             key.append(key[i % len(key)])
-    else: #memendekkan panjang key menjadi 256 bit
+    else: #memendekkan panjang key menyesuaikan panjang KSA
         shortenKey(key)
 
     #LSFR    
@@ -36,10 +36,10 @@ def ksa_lsfr(key):
         biner = str( int(biner[l-1]) ^ int(biner[0])) + biner[0:l-1]
 
     #KSA
-    S = list(range(256))
+    S = list(range(256))#inisiasi larik
     j = 0
-    for i in range(256):
-        j = (j + S[i] + int(lsfr[i]) + int((key[i % key_length]))) % 256
+    for i in range(256): #permutasi
+        j = (j + S[i] + int(lsfr[i]) + int((key[i % key_length]))) % 256 #modifikasi dengan menambahkan bit lsfr
         S[i], S[j] = S[j], S[i] 
 
     return S
