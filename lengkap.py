@@ -63,4 +63,3 @@ def convert(key, teks): # Encrypt & decrypt
     output = ''.join(result)
     return (codecs.decode(output, 'hex_codec').decode('latin-1'))
 
-# print(convert('senin','uæá1Þ¶bû3ï"'))
