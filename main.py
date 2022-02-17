@@ -109,18 +109,26 @@ class Upload(QDialog):
         self.uploadedFile = None 
     def encrypt(self): 
         kunci = self.kunci.text()
-        self.hasil.setText('keluaran')   
+        keluaran = convert(kunci,data)
+        keluaran = 'Hasil Enkripsi: ' + keluaran
+        self.hasil.setText(keluaran)  
     def decrypt(self):    
         kunci = self.kunci.text()
-        self.hasil.setText('keluaranx')   
+        keluaran = convert(kunci,data)
+        keluaran = 'Hasil Dekripsi: ' + keluaran
+        self.hasil.setText(keluaran)   
     def upload(self):
         fileName, _ = QFileDialog.getOpenFileName(
-            self, "Upload CV File", "")
+            self, "Upload File", "")
         if fileName:
+            global data
             self.uploadedFile = fileName
             self.fileName.setText(os.path.basename(fileName))
+            file1 = open(fileName, "rt")
+            data = file1.read()
         else:
             print("No file selected")  
+
 app = QApplication(sys.argv)
 widget = QtWidgets.QStackedWidget()
 widget.addWidget(Landing())  # Index jadi 0  
